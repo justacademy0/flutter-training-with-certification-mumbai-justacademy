@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter Training with Certification in Mumbai | JustAcademy</title>
+    <meta name="description" content="Get certified in Flutter app development with our comprehensive training in Mumbai. Learn from industry experts and build cross-platform apps. Enroll now for Flutter certification!">
+    <meta name="keywords" content="Flutter Training, Flutter Certification, Certified Flutter Developer, Flutter Course in Mumbai, Mobile App Development, Dart Programming, Flutter Framework, JustAcademy, Flutter Certification Mumbai">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2D6AE0;
+            --secondary: #FF6B35;
+            --dark: #1A1F36;
+            --light: #F8F9FC;
+            --accent: #6E44FF;
+            --success: #00C896;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--dark), #2c3e50);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(120deg, #4b6cb7, #182848);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 8s infinite ease-in-out;
+            z-index: 0;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.4; }
+            50% { transform: scale(1.2); opacity: 0.1; }
+            100% { transform: scale(0.8); opacity: 0.4; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.4);
+            animation: pulseBtn 2s infinite;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn:hover {
+            background: #e05a2a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.6);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @keyframes pulseBtn {
+            0% { box-shadow: 0 0 0 0 rgba(255,107,53,0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255,107,53,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,107,53,0); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        /* Modules Section */
+        .modules {
+            background: white;
+            padding: 5rem 0;
+        }
+
+        .module-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .module-item {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .module-item:last-child {
+            border-bottom: none;
+        }
+
+        .module-item:hover {
+            background: rgba(45, 106, 224, 0.05);
+        }
+
+        .module-number {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+
+        .module-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .module-content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .cta-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* Certification Section */
+        .certification {
+            background: linear-gradient(to right, var(--dark), #2c3e50);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cert-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cert-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            height: 120px;
+            background: var(--secondary);
+            border-radius: 50%;
+            margin: 2rem 0;
+            font-size: 3rem;
+            animation: rotate 8s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .contact-card p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links li {
+            margin: 0 1rem;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-card, .contact-card {
+                padding: 1.5rem;
+            }
+
+            .module-item {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Just<span>Academy</span></a>
+                <ul class="nav-links">
+                    <li><a href="https://www.justacademy.co/">Home</a></li>
+                    <li><a href="https://www.justacademy.co/course-detail/flutter-training">Course Details</a></li>
+                    <li><a href="https://www.justacademy.co/">All Courses</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Flutter Training with Certification</h1>
+                <h2>Become a <span class="highlight">Certified</span> Flutter Developer in Mumbai</h2>
+                <p>Join our industry-led Flutter training program and master cross-platform app development. Get certified and kickstart your career in mobile development!</p>
+                <div class="btn-container">
+                    <a href="https://www.justacademy.co/course-detail/flutter-training" class="btn">Enroll Now</a>
+                    <a href="https://www.justacademy.co/" class="btn btn-outline">Explore Other Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our Flutter Training?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Industry Certification</h3>
+                    <p>Earn a recognized certification that validates your Flutter development skills to employers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Hands-on Training</h3>
+                    <p>Learn by building real-world applications with expert guidance from industry professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career Support</h3>
+                    <p>Get job placement assistance and career guidance upon course completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules">
+        <div class="container">
+            <div class="section-title">
+                <h2>Course Modules</h2>
+                <p>Comprehensive curriculum designed to make you a Flutter expert</p>
+            </div>
+            
+            <div class="module-list">
+                <div class="module-item">
+                    <div class="module-number">1</div>
+                    <div class="module-content">
+                        <h3>Introduction to Dart Programming</h3>
+                        <p>Master Dart fundamentals - syntax, OOP concepts, and asynchronous programming</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">2</div>
+                    <div class="module-content">
+                        <h3>Flutter Fundamentals</h3>
+                        <p>Widgets, layouts, state management, and building responsive UIs</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">3</div>
+                    <div class="module-content">
+                        <h3>State Management Solutions</h3>
+                        <p>Provider, Bloc, Riverpod, and other state management techniques</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">4</div>
+                    <div class="module-content">
+                        <h3>API Integration & Networking</h3>
+                        <p>Connect your apps to RESTful APIs and handle data efficiently</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">5</div>
+                    <div class="module-content">
+                        <h3>Database & Local Storage</h3>
+                        <p>SQLite, Hive, and Firebase integration for data persistence</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">6</div>
+                    <div class="module-content">
+                        <h3>Advanced UI/UX Techniques</h3>
+                        <p>Animations, custom widgets, and responsive design patterns</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">7</div>
+                    <div class="module-content">
+                        <h3>Testing & Debugging</h3>
+                        <p>Unit testing, widget testing, and debugging best practices</p>
+                    </div>
+                </div>
+                <div class="module-item">
+                    <div class="module-number">8</div>
+                    <div class="module-content">
+                        <h3>Deployment & App Store Publishing</h3>
+                        <p>Prepare and publish your apps to Google Play Store and Apple App Store</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="https://www.justacademy.co/course-detail/flutter-training" class="btn">Download Full Syllabus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="certification">
+        <div class="container">
+            <div class="cert-content">
+                <h2>Get Certified in Flutter Development</h2>
+                <p>Our comprehensive Flutter training in Mumbai prepares you for the official Flutter certification exam. Upon successful completion, you'll receive a certification that demonstrates your expertise in:</p>
+                
+                <div class="cert-badge">
+                    <i class="fas fa-medal"></i>
+                </div>
+                
+                <ul style="list-style: none; text-align: left; max-width: 600px; margin: 0 auto;">
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 10px;"></i> Dart programming fundamentals</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 10px;"></i> Flutter widgets and UI development</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 10px;"></i> State management solutions</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 10px;"></i> API integration and backend connectivity</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--secondary); margin-right: 10px;"></i> App testing and deployment</li>
+                </ul>
+                
+                <a href="https://www.justacademy.co/course-detail/flutter-training" class="btn" style="margin-top: 2.5rem;">Get Certified Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Visit our Mumbai training center or get in touch</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Training Center</h3>
+                    <p>Office no : 318, Imperia T2 Commercial,</p>
+                    <p>JP-North, Mira Bhayander Rd,</p>
+                    <p>Near to Arkade Art Complex,</p>
+                    <p>Vinay Nagar, Kashimira, Mira Road,</p>
+                    <p>Mumbai, Maharashtra 401107</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>+91-9987184296</p>
+                    <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>info@justacademy.co</p>
+                    <p>We typically respond within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">Just<span>Academy</span></a>
+            <p>Premier Flutter Training Institute in Mumbai</p>
+            
+            <ul class="footer-links">
+                <li><a href="https://www.justacademy.co/">Home</a></li>
+                <li><a href="https://www.justacademy.co/course-detail/flutter-training">Flutter Course</a></li>
+                <li><a href="https://www.justacademy.co/">All Courses</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            
+            <p class="copyright">© 2023 JustAcademy - Flutter Training with Certification in Mumbai. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
